@@ -46,7 +46,7 @@ export const Aside = styled.aside<IAside>`
 `;
 
 export const Menu = styled.menu`
-  padding-top: 48px;
+  padding-top: 32px;
   list-style-type: none;
 `;
 
