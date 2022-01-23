@@ -1,13 +1,22 @@
 import type { ChangeEvent } from "react";
+
 import { useState } from "react";
 import Image from "next/image";
 
 import icSearch from "@public/images/icon-search.png";
 import useDebounce from "@/hooks/useDebounce";
 import Card from "@/styles/components/Card";
-import Flex from "@/styles/components/Flex";
 
-import { Title, Text, Search, IconSearch, InputSearch, BtnAdd } from "./styles";
+import {
+  Wrapper,
+  Title,
+  Text,
+  SearchWrapper,
+  Search,
+  IconSearch,
+  InputSearch,
+  BtnAdd,
+} from "./styles";
 
 interface ISearchBox {
   handleSearch: (val: string) => void;
@@ -26,13 +35,13 @@ export default function SearchBox(props: ISearchBox) {
 
   return (
     <Card width="100%" padding="16px 24px">
-      <Flex width="100%" alignItems="center" justifyContent="space-between">
+      <Wrapper width="100%" alignItems="center" justifyContent="space-between">
         <div>
           <Title>DRIVER MANAGEMENT</Title>
           <Text>Data driver yang bekerja dengan Anda.</Text>
         </div>
-        <Flex alignItems="center">
-          <Search height="40px" alignItems="center">
+        <SearchWrapper alignItems="center">
+          <Search alignItems="center">
             <IconSearch>
               <Image src={icSearch} width={16} height={16} alt="search" />
             </IconSearch>
@@ -43,8 +52,8 @@ export default function SearchBox(props: ISearchBox) {
             />
           </Search>
           <BtnAdd>TAMBAH DRIVER +</BtnAdd>
-        </Flex>
-      </Flex>
+        </SearchWrapper>
+      </Wrapper>
     </Card>
   );
 }
