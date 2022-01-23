@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import List from "./List";
@@ -6,11 +7,16 @@ import { Aside, Menu } from "./styles";
 
 interface ISidebar {
   isOpen: boolean;
+  handleClose: () => void;
 }
 
 export default function Sidebar(props: ISidebar) {
-  const { isOpen } = props;
+  const { isOpen, handleClose } = props;
   const { pathname } = useRouter();
+
+  useEffect(() => {
+    handleClose();
+  }, [handleClose, pathname]);
 
   return (
     <Aside isOpen={isOpen}>

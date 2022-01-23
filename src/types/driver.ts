@@ -4,7 +4,7 @@ export interface IDriverDob {
 }
 
 export interface IDriverId {
-  id: string;
+  name: string;
   value: string | null;
 }
 
