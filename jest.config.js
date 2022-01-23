@@ -13,7 +13,11 @@ const customJestConfig = {
     "^@/(.*)$": "<rootDir>/src/$1",
     "@public/(.*)$": "<rootDir>/public/$1",
   },
-  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  collectCoverageFrom: [
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/**/*.d.ts",
+    "!<rootDir>/src/types/*.ts",
+  ],
 };
 
 module.exports = createJestConfig(customJestConfig);

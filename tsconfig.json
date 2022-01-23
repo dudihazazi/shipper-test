@@ -31,6 +31,7 @@
     "src/@types/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js"
+    "next.config.js",
+    "__mocks__/fileMock.js"
   ]
 }

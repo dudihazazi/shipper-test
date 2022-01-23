@@ -9,7 +9,11 @@ export default function Hamburger(props: IHamburger) {
   const { isOpen, handleOpen } = props;
 
   return (
-    <BtnHamburger isOpen={isOpen} onClick={handleOpen}>
+    <BtnHamburger
+      data-testid="navHamburger"
+      isOpen={isOpen}
+      onClick={handleOpen}
+    >
       <span></span>
       <span></span>
       <span></span>
