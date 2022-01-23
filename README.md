@@ -1,34 +1,50 @@
-# TypeScript & Styled Components Next.js example
+# Shipper FE Engineer Test
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
+This is a project that are made to fulfill Shipper's FE Engineer Test
 
-## Preview
+## Tech Stacks
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+This project are powered by:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
+- [TypeScript](https://www.typescriptlang.org/) for the language
+- [NextJS](https://nextjs.org/) for the framework
+- [styled-components](https://styled-components.com/) for CSS-in-JS
+- [jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/) for Unit Testing
 
-## Deploy your own
+## Directories
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Mostly project files are inside src folder. Here's the detail:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components&project-name=with-typescript-styled-components&repository-name=with-typescript-styled-components)
+- @types : type definition folder
+- components : reusable components that are used in this project
+- helpers : miscellaneous function that helps development
+- hooks : React hooks
+- pages : Pages that are exist in this project
+- styles : styling related stuff
+- types : folder for interfaces
 
 ## How to use it?
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+To run in local environment:
 
 ```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-styled-components-app
+npm run dev
 # or
-yarn create next-app --example with-typescript-styled-components with-typescript-styled-components-app
+yarn run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+To run test files:
 
-## Notes
+```bash
+npm run test
+# or
+yarn run test
+```
 
-This is an amalgamation of the 2 existing examples:
+To get test coverage report:
 
-- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+```bash
+npm run coverage
+# or
+yarn run coverage
+```
