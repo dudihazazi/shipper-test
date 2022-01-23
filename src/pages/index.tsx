@@ -1,3 +1,3 @@
 export default function Home() {
-  return <p>gurae</p>;
+  return <p>ini home</p>;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 import DriverCard from "@/components/DriverCard";
+import DriverNotFound from "@/components/DriverNotFound";
 import SearchBox from "@/components/SearchBox";
 import apiNormalizer from "@/helpers/apiNormalizer";
 import Flex from "@/styles/components/Flex";
@@ -52,6 +53,8 @@ export default function Driver(props: IDriverProps) {
     return filteredDriver.slice(start, end);
   }, [currentPage, filteredDriver]);
 
+  const isAnyDriver = shownDriver.length > 0;
+
   const handleSearch = useCallback((searchVal) => {
     setKeyword(searchVal);
     setPage(INITIAL_PAGE);
@@ -89,6 +92,7 @@ export default function Driver(props: IDriverProps) {
         {shownDriver.map((driver, idx) => (
           <DriverCard key={idx} {...driver} />
         ))}
+        {!isAnyDriver && <DriverNotFound />}
       </Carousel>
       <Flex
         width="100%"

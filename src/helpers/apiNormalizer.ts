@@ -2,6 +2,7 @@ import type { IDriverRes } from "@/types/driver";
 
 import getDob from "./getDob";
 
+//helpers to normalize api result
 export default function apiNormalizer(data: IDriverRes | undefined) {
   const _data = data || ({} as IDriverRes);
   const result = _data.results || [];

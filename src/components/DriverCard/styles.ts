@@ -14,6 +14,11 @@ import {
 } from "@/styles/variables/colors";
 import { openBold } from "@/styles/variables/fonts";
 
+interface IBodySection {
+  isSmHide?: boolean;
+  isSmLast?: boolean;
+}
+
 export const CardDriver = styled(Card)`
   width: 100%;
   flex-shrink: 0;
@@ -73,11 +78,6 @@ export const BodyImg = styled.div`
     margin: 0 0 16px;
   }
 `;
-
-interface IBodySection {
-  isSmHide?: boolean;
-  isSmLast?: boolean;
-}
 
 export const BodySection = styled.div<IBodySection>`
   display: ${(props) => (props.isSmHide ? "none" : "block")};

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import pxToRem from "@/helpers/pxToRem";
 import mediaQuery from "@/helpers/mediaQuery";
-import { SM, MD, LG, XL } from "@/styles/variables/breakpoints";
+import pxToRem from "@/helpers/pxToRem";
+import { MD, LG, XL } from "@/styles/variables/breakpoints";
 import {
   white,
   blackPrimary,
