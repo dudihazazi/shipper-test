@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Flex from "@/styles/components/Flex";
+
 import { LinkList } from "./styles";
 
 interface IList {
