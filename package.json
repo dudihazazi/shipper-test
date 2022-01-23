@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch"
   },
   "dependencies": {
     "next": "latest",
@@ -14,6 +15,9 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/node": "15.0.0",
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
@@ -21,6 +25,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+    "jest": "^27.4.7",
     "typescript": "^4.3.2"
   }
 }
