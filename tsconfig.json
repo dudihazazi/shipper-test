@@ -23,8 +23,9 @@
     "paths": {
       "@/*": ["./*"],
       "@public/*": ["../public/*"]
-    }
+    },
+    "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["@types/next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
