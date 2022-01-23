@@ -43,6 +43,7 @@ export default function DriverCard(props: IDriverCard) {
       <CardBody padding="24px 16px">
         <BodyImg>
           <Image
+            priority
             src={img}
             alt={firstName}
             layout="fill"
@@ -57,7 +58,7 @@ export default function DriverCard(props: IDriverCard) {
               {firstName} {lastName}
             </BodyTxt>
           </BodySection>
-          <BodySection>
+          <BodySection className="sm_last">
             <BodyTitle>Telepon</BodyTitle>
             <BodyTxt>{phone}</BodyTxt>
           </BodySection>

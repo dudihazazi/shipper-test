@@ -26,6 +26,7 @@ export const Wrapper = styled(Flex)`
 `;
 
 export const Title = styled.h2`
+  font-size: ${pxToRem(16)};
   font-family: ${Nunito};
   font-weight: ${nunitoBold};
   color: ${redPrimary};
@@ -40,6 +41,7 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
+  font-size: ${pxToRem(12)};
   font-weight: ${openNormal};
   color: ${blackSecondary};
 
@@ -74,14 +76,12 @@ export const Search = styled(Flex)`
 `;
 
 export const IconSearch = styled.span`
+  height: 32px;
+  padding: 8px;
+
   img {
     filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(328deg)
       brightness(118%) contrast(119%);
-  }
-
-  ${mediaQuery(MD)} {
-    height: 32px;
-    padding: 8px;
   }
 
   ${mediaQuery(LG)} {
@@ -91,14 +91,13 @@ export const IconSearch = styled.span`
 `;
 
 export const InputSearch = styled.input`
+  width: calc(100% - 32px);
+  height: 32px;
+  padding: 8px 8px 8px 0;
   border: none;
 
-  ${mediaQuery(MD)} {
-    height: 32px;
-    padding: 8px 8px 8px 0;
-  }
-
   ${mediaQuery(LG)} {
+    width: calc(100% - 40px);
     height: 40px;
     padding: 12px 8px 12px 0;
   }
@@ -106,17 +105,14 @@ export const InputSearch = styled.input`
 
 export const BtnAdd = styled.button`
   width: 100%;
+  height: 32px;
+  padding: 0 8px;
   background-color: ${redPrimary};
   border: none;
   color: ${white};
   font-size: ${pxToRem(12)};
   font-weight: ${openBold};
   cursor: pointer;
-
-  ${mediaQuery(MD)} {
-    padding: 0 8px;
-    height: 32px;
-  }
 
   ${mediaQuery(LG)} {
     padding: 0 16px;

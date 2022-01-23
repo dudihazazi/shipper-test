@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+import mediaQuery from "@/helpers/mediaQuery";
 import pxToRem from "@/helpers/pxToRem";
 import Card from "@/styles/components/Card";
 import Flex from "@/styles/components/Flex";
+import { MD } from "@/styles/variables/breakpoints";
 import {
   blackPrimary,
   blackSecondary,
@@ -11,16 +13,21 @@ import {
   redPrimary,
 } from "@/styles/variables/colors";
 import { openBold } from "@/styles/variables/fonts";
-import { MD } from "@/styles/variables/breakpoints";
-import mediaQuery from "@/helpers/mediaQuery";
 
 export const CardDriver = styled(Card)`
+  width: 100%;
+  flex-shrink: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
   ${mediaQuery(MD)} {
     width: 300px;
-    flex-shrink: 0;
 
     &:not(:last-child) {
       margin-right: 24px;
+      margin-bottom: 0;
     }
   }
 `;
@@ -47,24 +54,29 @@ export const TextID = styled.p`
 `;
 
 export const CardBody = styled(Flex)`
+  flex-direction: row;
+
   ${mediaQuery(MD)} {
     flex-direction: column;
   }
 `;
 
 export const BodyImg = styled.div`
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin: auto 16px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+
   ${mediaQuery(MD)} {
-    position: relative;
-    width: 64px;
-    height: 64px;
-    margin-bottom: 16px;
-    border-radius: 50%;
-    overflow: hidden;
+    margin: 0 0 16px;
   }
 `;
 
 interface IBodySection {
   isSmHide?: boolean;
+  isSmLast?: boolean;
 }
 
 export const BodySection = styled.div<IBodySection>`
@@ -74,8 +86,16 @@ export const BodySection = styled.div<IBodySection>`
     margin-bottom: 16px;
   }
 
+  &.sm_last {
+    margin-bottom: 0;
+  }
+
   ${mediaQuery(MD)} {
     display: block;
+
+    &.sm_last {
+      margin-bottom: 16px;
+    }
   }
 `;
 

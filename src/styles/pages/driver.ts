@@ -1,17 +1,25 @@
-import pxToRem from "@/helpers/pxToRem";
 import styled from "styled-components";
 
+import pxToRem from "@/helpers/pxToRem";
+import mediaQuery from "@/helpers/mediaQuery";
+
 import Flex from "../components/Flex";
+import { MD } from "../variables/breakpoints";
 import { blackPrimary, blackTernary } from "../variables/colors";
 import { openBold } from "../variables/fonts";
-
-export const Carousel = styled(Flex)`
-  overflow-x: auto;
-`;
 
 interface IBtnPage {
   isDisabled: boolean;
 }
+
+export const Carousel = styled(Flex)`
+  flex-wrap: wrap;
+
+  ${mediaQuery(MD)} {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+`;
 
 export const BtnPage = styled.button<IBtnPage>`
   border: none;

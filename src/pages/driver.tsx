@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 import DriverCard from "@/components/DriverCard";
 import SearchBox from "@/components/SearchBox";
@@ -27,6 +27,7 @@ export default function Driver(props: IDriverProps) {
 
   const [currentPage, setPage] = useState(INITIAL_PAGE);
   const [keyword, setKeyword] = useState("");
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const filteredDriver = useMemo(() => {
     if (keyword) {
@@ -59,10 +60,32 @@ export default function Driver(props: IDriverProps) {
   const handleNext = () => setPage((prev) => prev + 1);
   const handlePrev = () => setPage((prev) => prev - 1);
 
+  useEffect(() => {
+    const carouselEl = carouselRef.current;
+
+    if (carouselEl) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+      carouselEl.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [currentPage]);
+
   return (
     <div>
       <SearchBox handleSearch={handleSearch} />
-      <Carousel margin="24px 0 0" alignItems="center">
+      <Carousel
+        ref={carouselRef}
+        margin="24px 0 0"
+        width="100%"
+        alignItems="center"
+      >
         {shownDriver.map((driver, idx) => (
           <DriverCard key={idx} {...driver} />
         ))}

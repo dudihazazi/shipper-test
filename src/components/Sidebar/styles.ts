@@ -20,6 +20,7 @@ interface IAside {
 }
 
 export const Aside = styled.aside<IAside>`
+  z-index: 1;
   position: fixed;
   width: 100vw;
   height: calc(100vh - 48px);

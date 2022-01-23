@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import mediaQuery from "@/helpers/mediaQuery";
-import { SM, MD, LG, XL } from "@/styles/variables/breakpoints";
+import { MD, LG, XL } from "@/styles/variables/breakpoints";
 import { greySecondary } from "@/styles/variables/colors";
 
 export const Wrapper = styled.div`
@@ -28,6 +28,7 @@ export const Wrapper = styled.div`
 export const Main = styled.main`
   width: 100%;
   min-height: calc(100vh - 48px);
+  padding: 24px 16px;
   background-color: ${greySecondary};
 
   ${mediaQuery(MD)} {
