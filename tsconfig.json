@@ -27,5 +27,10 @@
     "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["@types/next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "src/@types/next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js"
+  ]
 }

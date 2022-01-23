@@ -13,7 +13,6 @@ interface ICard {
 }
 
 const Card = styled("div")<Partial<ICard>>({}, (props) => ({
-  display: "flex",
   width: props.width || "initial",
   height: props.height || "initial",
   padding: props.padding || "0",
