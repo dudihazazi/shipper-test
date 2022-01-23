@@ -1,7 +1,6 @@
-import type { ChangeEvent } from "react";
-
 import { useState } from "react";
 import Image from "next/image";
+import type { ChangeEvent } from "react";
 
 import icSearch from "@public/images/icon-search.png";
 import useDebounce from "@/hooks/useDebounce";

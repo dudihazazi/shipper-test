@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import pxToRem from "@/helpers/pxToRem";
 import mediaQuery from "@/helpers/mediaQuery";
-import { SM, MD, LG, XL } from "@/styles/variables/breakpoints";
+import pxToRem from "@/helpers/pxToRem";
+import { MD } from "@/styles/variables/breakpoints";
 import {
   white,
   blackPrimary,
@@ -11,6 +11,10 @@ import {
   redPrimary,
 } from "@/styles/variables/colors";
 import { openBold } from "@/styles/variables/fonts";
+
+interface IBtnHamburger {
+  isOpen: boolean;
+}
 
 export const Nav = styled.nav`
   z-index: 2;
@@ -73,10 +77,6 @@ export const Avatar = styled.div`
 `;
 
 //style Hamburger.tsx
-interface IBtnHamburger {
-  isOpen: boolean;
-}
-
 export const BtnHamburger = styled.div<IBtnHamburger>`
   width: 32px;
   height: 15px;

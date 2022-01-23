@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import type { CSSProperties } from "styled-components";
-
 interface IFlex {
   width: CSSProperties["width"];
   height: CSSProperties["height"];
