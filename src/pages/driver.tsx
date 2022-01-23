@@ -34,7 +34,8 @@ export default function Driver(props: IDriverProps) {
     if (keyword) {
       const filtered = data.filter((dt) => {
         const lower = dt.firstName.toLowerCase();
-        return lower.includes(keyword);
+        const keywordLow = keyword.toLowerCase();
+        return lower.includes(keywordLow);
       });
 
       return filtered;
